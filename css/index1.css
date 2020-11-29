@@ -1,0 +1,17 @@
+body{
+	background-color:#cccccc;
+	background-image:url("../img/front.jpg");
+	width:100%;
+	padding:5em 0 5em 0;
+	background-size:100%;
+}
+h1
+{
+	font-family:"Gugi",cursive;
+	color:#fff;
+}
+label
+{
+	font-family:lato,cursive;
+	color:#fff;
+}

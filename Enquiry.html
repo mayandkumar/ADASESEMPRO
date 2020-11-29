@@ -1,0 +1,45 @@
+<?php
+session_start();
+include ("connect.php");
+global $conn;
+
+$acc_no = $_SESSION["acc_no"];
+
+$sql_get_balance = "SELECT `Balance` FROM `Customers` WHERE `AccountNo` = '$acc_no'";
+$get_balance_result = $conn->query($sql_get_balance);
+
+while($row = $get_balance_result->fetch_assoc()){
+		global $balance;
+		$balance = $row['Balance'];
+}
+
+
+?>
+<html>
+<head>
+	<title>ATM</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/index1.css">
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Gugi&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<!--Main Code goes here-->
+
+<body>
+	<div class="Head">
+		<h1>Your Account Balance is:</h1>
+		<br>
+		<p><?= $balance?></p>
+	</div>
+	<div class="receipt">
+		<p>Do you Want to Print Receipt?</p>
+		<p><span>Yes</span><a href="menu.php"><span>No</span></a></p>
+	</div>
+</body>
+</html>

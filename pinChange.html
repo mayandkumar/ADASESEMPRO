@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>ATM</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Gugi&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/index1.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<!--Main Code goes here-->
+<body>
+	<div class="container">
+
+		<h1 align="center"><u>Change PIN </u></h1>
+
+		
+		<!--Form Declarartion-->
+		<form class="form-horizontal" style="position:relative; left:30%;" method="post" action = "pinChange.php">
+			<div class="form-group">
+				<div class="col-xs-3">
+					<label for="prevPin">Old PIN</label>
+					<input class="form-control" type="text" placeholder="Enter old PIN" name="old_pin" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-xs-3">
+					<label for="pin">Enter new PIN : </label>
+					<input class="form-control" type="password" placeholder="Enter new 4 digit PIN" name="pin" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-xs-3">
+					<label for="re_pin">Re-enter new PIN : </label>
+					<input class="form-control" type="password" placeholder="Re-Enter new 4 digit PIN" name="re_pin" required>
+				</div>
+			</div>
+			<input type="submit" class="btn btn-default" value="Change PIN">
+		</form>
+	</div>
+
+</body>
+</html>
